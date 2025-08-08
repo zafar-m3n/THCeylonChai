@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "@/assets/images/logoWhite.png";
-import { Icon } from "@iconify/react";
+import Icon from "@/components/ui/Icon";
 
 const Footer = () => {
   const navLinks = [
