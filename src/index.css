@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lobster: "Lobster", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter Tight", sans-serif;
+
+  --color-primary: #fafafa;
+  --color-accent: #fd6001;
+  --color-secondary: #010101;
+}
