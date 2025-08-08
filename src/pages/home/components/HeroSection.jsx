@@ -62,7 +62,7 @@ const HeroSection = () => {
       <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-6">
         <TextGenerateEffect
           key={`title-${currentIndex}`}
-          className="text-center text-[2rem] md:text-[3rem] lg:text-[4rem] font-bold leading-tight tracking-tight text-white"
+          className="text-center text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-tight tracking-tight text-white"
           words={slides[currentIndex].title}
           animated={true}
         />

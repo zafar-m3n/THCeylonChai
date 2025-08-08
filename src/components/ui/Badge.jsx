@@ -1,5 +1,5 @@
 import React from "react";
-import IconComponent from "./IconComponent";
+import IconComponent from "./Icon";
 
 const Badge = ({
   children,
@@ -7,7 +7,7 @@ const Badge = ({
   icon, // icon string (optional)
   className = "",
 }) => {
-  const base = "inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded-full";
+  const base = "inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded";
 
   const variants = {
     primary: "bg-accent text-white",
