@@ -8,4 +8,15 @@
   --color-primary: #fafafa;
   --color-accent: #fd6001;
   --color-secondary: #010101;
+
+  --animate-zoom: zoom 5s ease-in-out infinite;
+
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
 }

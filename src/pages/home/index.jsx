@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import HeroSection from "./components/HeroSection";
 
 const HomePage = () => {
-  return <div>HomePage</div>;
+  useEffect(() => {
+    document.title = "T & H Ceylon Chai | Home";
+  }, []);
+
+  return (
+    <div>
+      <HeroSection />
+    </div>
+  );
 };
 
 export default HomePage;

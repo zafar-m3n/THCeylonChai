@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between lg:justify-center relative">
           <nav className="hidden lg:flex items-center gap-6 absolute left-6">
             {navLinks.slice(0, 3).map((link, index) => (
-              <a key={index} href={link.href} className="font-medium text-gray-700 hover:text-accent transition">
+              <a key={index} href={link.href} className="font-medium hover:text-accent transition">
                 {link.label}
               </a>
             ))}
@@ -33,7 +33,7 @@ const Header = () => {
           </div>
           <nav className="hidden lg:flex items-center gap-6 absolute right-6">
             {navLinks.slice(3).map((link, index) => (
-              <a key={index} href={link.href} className="font-medium text-gray-700 hover:text-accent transition">
+              <a key={index} href={link.href} className="font-medium hover:text-accent transition">
                 {link.label}
               </a>
             ))}
@@ -57,7 +57,7 @@ const Header = () => {
               key={index}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-base text-gray-700 hover:text-accent font-medium"
+              className="text-base hover:text-accent font-medium"
             >
               {link.label}
             </a>
