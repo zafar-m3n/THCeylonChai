@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import HeroSection from "./components/HeroSection";
 import BestSellers from "./components/BestSellers";
+import Testimonials from "./components/Testimonials";
 
 const HomePage = () => {
   useEffect(() => {
@@ -11,6 +12,7 @@ const HomePage = () => {
     <div>
       <HeroSection />
       <BestSellers />
+      <Testimonials />
     </div>
   );
 };
