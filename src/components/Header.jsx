@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Icon } from "@iconify/react";
+import { useLocation } from "react-router-dom";
 import logo from "@/assets/images/logo.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -14,32 +16,49 @@ const Header = () => {
     { label: "Contact Us", href: "/contact" },
   ];
 
+  const isActive = (href) => location.pathname === href;
+
   return (
     <>
       <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-white/40 backdrop-blur-lg border border-white/40 rounded-2xl px-6 py-3 shadow-[0_0_15px_#999999]">
         <div className="flex items-center justify-between lg:justify-center relative">
+          {/* Left Nav */}
           <nav className="hidden lg:flex items-center gap-6 absolute left-6">
             {navLinks.slice(0, 3).map((link, index) => (
-              <a key={index} href={link.href} className="font-medium hover:text-accent transition">
+              <a
+                key={index}
+                href={link.href}
+                className={`font-medium transition ${isActive(link.href) ? "text-accent" : "hover:text-accent"}`}
+              >
                 {link.label}
               </a>
             ))}
           </nav>
+
+          {/* Logo + Mobile Menu Button */}
           <div className="lg:flex-1 lg:text-center flex items-center justify-between w-full lg:static">
             <img src={logo} alt="Logo" className="h-12 object-contain lg:mx-auto" />
             <button onClick={() => setMenuOpen(true)} className="lg:hidden text-gray-700">
               <Icon icon="mdi:menu" width={28} />
             </button>
           </div>
+
+          {/* Right Nav */}
           <nav className="hidden lg:flex items-center gap-6 absolute right-6">
             {navLinks.slice(3).map((link, index) => (
-              <a key={index} href={link.href} className="font-medium hover:text-accent transition">
+              <a
+                key={index}
+                href={link.href}
+                className={`font-medium transition ${isActive(link.href) ? "text-accent" : "hover:text-accent"}`}
+              >
                 {link.label}
               </a>
             ))}
           </nav>
         </div>
       </header>
+
+      {/* Mobile Menu */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white z-60 transform transition-transform duration-300 ease-in-out shadow-xl ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
@@ -57,7 +76,9 @@ const Header = () => {
               key={index}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="text-base hover:text-accent font-medium"
+              className={`text-base font-medium transition ${
+                isActive(link.href) ? "text-accent" : "hover:text-accent"
+              }`}
             >
               {link.label}
             </a>
@@ -65,6 +86,7 @@ const Header = () => {
         </nav>
       </div>
 
+      {/* Overlay */}
       {menuOpen && <div className="fixed inset-0 bg-black/40 z-50 lg:hidden" onClick={() => setMenuOpen(false)} />}
     </>
   );
