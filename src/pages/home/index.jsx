@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import BestSellers from "./components/BestSellers";
 import Testimonials from "./components/Testimonials";
 import Benefits from "./components/WhyChooseUs";
+import ExploreOurRange from "./components/ExploreOurRange";
 
 const HomePage = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const HomePage = () => {
       <BestSellers />
       <Testimonials />
       <Benefits />
+      <ExploreOurRange />
     </div>
   );
 };
