@@ -4,7 +4,7 @@ import sellers from "@/assets/images/sellers.jpg"; // Make sure you have this im
 
 const SellersHero = () => {
   return (
-    <div className="relative overflow-hidden text-white h-[35vh] md:h-[40vh]">
+    <div className="relative overflow-hidden text-white h-[40vh]">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div
