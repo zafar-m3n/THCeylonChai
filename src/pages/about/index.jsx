@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AboutHero from "./components/AboutHero";
+import AboutContent from "./components/AboutContent";
 
 const AboutUs = () => {
-  return <div>AboutUs</div>;
+  useEffect(() => {
+    document.title = "T & H Ceylon Chai | About";
+  }, []);
+  return (
+    <div>
+      <AboutHero />
+      <AboutContent />
+    </div>
+  );
 };
 
 export default AboutUs;
