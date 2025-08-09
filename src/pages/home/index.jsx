@@ -4,6 +4,8 @@ import BestSellers from "./components/BestSellers";
 import Testimonials from "./components/Testimonials";
 import Benefits from "./components/WhyChooseUs";
 import ExploreOurRange from "./components/ExploreOurRange";
+import PartnerWithUs from "./components/PartnerWithUs";
+import AboutUs from "./components/AboutUs";
 
 const HomePage = () => {
   useEffect(() => {
@@ -17,6 +19,8 @@ const HomePage = () => {
       <Testimonials />
       <Benefits />
       <ExploreOurRange />
+      <AboutUs />
+      <PartnerWithUs />
     </div>
   );
 };
