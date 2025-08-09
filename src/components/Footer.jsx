@@ -7,7 +7,7 @@ const Footer = () => {
     { label: "Home", href: "/" },
     { label: "Our Teas", href: "/teas" },
     { label: "Brewing Tips", href: "/tips" },
-    { label: "Gallery", href: "/gallery" },
+    { label: "For Sellers", href: "/sellers" },
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
   ];

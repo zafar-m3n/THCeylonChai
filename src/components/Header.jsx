@@ -8,8 +8,8 @@ const Header = () => {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Our Teas", href: "/teas" },
-    // { label: "Brewing Tips", href: "/tips" },
-    // { label: "Gallery", href: "/gallery" },
+    { label: "Brewing Tips", href: "/tips" },
+    { label: "For Sellers", href: "/sellers" },
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
   ];
@@ -19,7 +19,7 @@ const Header = () => {
       <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-white/40 backdrop-blur-lg border border-white/40 rounded-2xl px-6 py-3 shadow-[0_0_15px_#999999]">
         <div className="flex items-center justify-between lg:justify-center relative">
           <nav className="hidden lg:flex items-center gap-6 absolute left-6">
-            {navLinks.slice(0, 2).map((link, index) => (
+            {navLinks.slice(0, 3).map((link, index) => (
               <a key={index} href={link.href} className="font-medium hover:text-accent transition">
                 {link.label}
               </a>
@@ -32,7 +32,7 @@ const Header = () => {
             </button>
           </div>
           <nav className="hidden lg:flex items-center gap-6 absolute right-6">
-            {navLinks.slice(2).map((link, index) => (
+            {navLinks.slice(3).map((link, index) => (
               <a key={index} href={link.href} className="font-medium hover:text-accent transition">
                 {link.label}
               </a>
